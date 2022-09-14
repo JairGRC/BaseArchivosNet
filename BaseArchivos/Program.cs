@@ -178,7 +178,7 @@ namespace BaseArchivos
 
                 "public async Task<bool> Delete(long id)\n{\nthrow new NotImplementedException();\n}",
 
-                "\npublic bool Delete(string id)\n{",
+                "\npublic async  Task<bool> Delete(string id)\n{",
                 "\n throw new NotImplementedException();",
                 "//bool exito = false;",
                 "//var regAfectados = 0;",
