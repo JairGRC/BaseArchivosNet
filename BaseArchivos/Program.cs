@@ -313,7 +313,7 @@ namespace BaseArchivos
                 " \n}",
                  string.Format("public async Task<Result<{0}Entity>> GetByItem({0}Filter filter, {0}FilterItemType filterType)",fileClase),
                  "{",
-                 string.Format("Result<{0}Entity> {0} = new Result<{0}>();",fileClase),
+                 string.Format("Result<{0}Entity> {0} = new Result<{0}Entity>();",fileClase),
                  string.Format("{0}.Item = await _{0}Repository.GetItem(filter,filterType);",fileClase),
                  //string.Format("new {0}Filter()",fileClase),
                  //"{",
@@ -324,7 +324,7 @@ namespace BaseArchivos
                  "}",
                  string.Format("public async Task<ListResult<{0}Entity>> GetByList({0}Filter filter,{0}FilterListType filterType, Pagination pagination)",fileClase),
                  "{",
-                 string.Format("ListResult<{0}Entity> lst = new ListResult<{0}>();",fileClase),
+                 string.Format("ListResult<{0}Entity> lst = new ListResult<{0}Entity>();",fileClase),
                  string.Format("lst.Item =await  _{0}Repository.GetLstItem(filter, filterType, pagination);",fileClase),
                  "return lst;",
                  "}",
@@ -445,6 +445,8 @@ namespace BaseArchivos
             Console.WriteLine("─█────█▄▄█▀▀▀▄───█▀▀──▀▀▀──█─");
             Console.WriteLine("█────────────█───█─▄▄▄────█──");
             Console.WriteLine("█──▀▀▀▀▀▄▄▄▄▄▀────▀▄──▀▀▀▀───");
+            Console.WriteLine("█──▀▀▀▀▀▄▄▄▄▄▀────▀▄──▀▀▀▀───");
+            Console.WriteLine("VersionV.2 Item_y_Advertencias");
             Console.WriteLine("Ingresa nombre del Proyecto:");
             string proyect = Console.ReadLine();
             Console.WriteLine("Ingresa nombre de la clase:");
